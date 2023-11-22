@@ -43,7 +43,12 @@ prevButton.addEventListener('click', () => {
   fetchCharacters();
 });
 
-
+searchBarContainer.addEventListener('submit', (e) => {
+  e.preventDefault();
+  searchQuery = searchBar.value;
+ //console.log(searchQuery)
+  fetchCharacters();
+});
 
 
 fetchCharacters();
